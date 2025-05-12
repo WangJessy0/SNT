@@ -11,6 +11,53 @@ p    {color: red;}
 
 <h1>This is a heading</h1>
 <p>This is a paragraph.</p>
+body {
+  background-color: #f0f4f8;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3 {
+  color: #00539f;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 2em;
+  border-bottom: 2px solid #00539f;
+  padding-bottom: 10px;
+}
+
+p {
+  margin: 10px 0;
+  padding: 0 20px;
+}
+
+ul {
+  margin-left: 40px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
 
 </body>
 </html> 
