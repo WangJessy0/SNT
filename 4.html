@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fonctionnement de la géolocalisation et calcul d'itinéraires</title>
+
+  <!-- Polices Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+
+  <!-- Style interne simple (ou tu peux l’intégrer dans style.css) -->
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1rem 2rem;
+      background-color: #fef6fb;
+      color: #2e2e2e;
+      line-height: 1.6;
+    }
+    h1, h2 {
+      font-family: 'DM Serif Display', serif;
+      color: #a0c4ff;
+      margin-bottom: 1rem;
+    }
+    p {
+      margin-bottom: 1rem;
+    }
+    ul {
+      margin-left: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    a {
+      color: #a0c4ff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    a:hover {
+      color: #ffc6ff;
+    }
+    .back-link {
+      display: inline-block;
+      margin-top: 2rem;
+      font-weight: 600;
+      padding: 0.6rem 1.2rem;
+      background-color: #a0c4ff;
+      color: white;
+      border-radius: 12px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+    .back-link:hover {
+      background-color: #ffc6ff;
+      color: #2e2e2e;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>4 - Localisation, cartographie et mobilité</h1>
+
+  <h2>Introduction</h2>
+  <p>Comment fonctionne un système de géolocalisation ? Comment sont calculés les itinéraires à partir des cartes numériques ? Chaque point à la surface de la Terre peut être repéré par deux coordonnées : la latitude et la longitude.</p>
+
+  <h2>I. Le principe de la géolocalisation</h2>
+  <p>Le principe de la géolocalisation repose sur deux coordonnées : la <strong>latitude</strong> et la <strong>longitude</strong>. La latitude est l'angle formé entre la verticale du lieu considéré et le plan équatorial. Elle s'exprime en degrés et s'étend de 0 à 90 degrés des deux côtés de l'équateur, en spécifiant la latitude nord et sud. La longitude est l'angle pointant vers l'ouest ou l'est par rapport au méridien de Greenwich. Elle est définie au maximum à 180 degrés à l'est et 180 degrés à l'ouest.</p>
+  
+  <p>Pour se géolocaliser, il est possible d'utiliser les systèmes <strong>GPS</strong> ou <strong>Galileo</strong>. Ces systèmes, constitués de nombreux satellites, envoient des signaux vers la Terre à intervalles réguliers. Les récepteurs GPS, positionnés sur Terre, peuvent alors recevoir ces signaux et estimer la distance qui les sépare des satellites émetteurs. En combinant ces informations, les récepteurs peuvent déduire leurs coordonnées géographiques. C'est le principe de la <strong>trilatéralisation</strong>.</p>
+
+  <h2>II. La trame NMEA</h2>
+  <p>La trame NMEA (National Marine Electronics Association) est l'une des trames permettant d'échanger des données de récepteur GPS. Elle est constituée d'une série de données séparées par des virgules. La trame indique, dans l'ordre :</p>
+  <ul>
+    <li>Le type de trame</li>
+    <li>L'heure d'envoi</li>
+    <li>La latitude</li>
+    <li>La longitude</li>
+    <li>Le positionnement</li>
+    <li>Le nombre de satellites</li>
+    <li>La précision (notée de 1 à 9, 1 étant la meilleure précision)</li>
+    <li>L'altitude</li>
+    <li>Et d'autres informations complémentaires</li>
+  </ul>
+
+  <h2>III. Les cartes numériques et les SIG</h2>
+  <p>L'informatique a beaucoup contribué à l'évolution des cartes et à leur exploitation via les <strong>SIG</strong> (systèmes d'information géographique). Quelques exemples populaires sont :</p>
+  <ul>
+    <li><strong>Google Maps</strong> : l'application de géolocalisation la plus utilisée.</li>
+    <li><strong>Géoportail</strong> : permet d'obtenir des cartes enrichies avec de multiples couches de données, incluant des statistiques publiques.</li>
+    <li><strong>OpenStreetMap</strong> : projet cartographique en ligne, collaboratif et mondial, qui repose sur la participation des internautes pour créer, modifier et mettre à jour des données.</li>
+  </ul>
+
+  <h2>IV. Les calculs d'itinéraires</h2>
+  <p>Des logiciels de cartographie comme <strong>Google Maps</strong> ou <strong>Waze</strong> permettent de calculer des itinéraires. Leur fonctionnement repose sur des algorithmes prenant en compte plusieurs paramètres comme :</p>
+  <ul>
+    <li>Le type de route souhaitée</li>
+    <li>Le véhicule utilisé</li>
+    <li>Le trafic en temps réel</li>
+  </ul>
+  <p>Les données sont souvent représentées sous forme de <strong>graphe</strong>, où chaque sommet correspond à un lieu, et chaque arête représente une voie reliant deux lieux. On peut affecter des valeurs aux arêtes comme la durée du trajet ou la distance. L'un des algorithmes utilisés pour calculer les itinéraires est l'<strong>algorithme de Dijkstra</strong>, qui permet de déterminer le chemin le plus court d'un sommet de départ à un sommet cible dans un graphe.</p>
+
+  <h2>V. Les enjeux de la géolocalisation</h2>
+  <p>De plus en plus d'applications s'appuient sur les données de géolocalisation des utilisateurs pour enrichir leur contenu ou proposer des publicités ciblées. Il est possible de paramétrer l'accès de ces applications aux données de géolocalisation, en choisissant de les accepter ou de les refuser. Il est important de prendre conscience des enjeux de sécurité, de confidentialité et de vie privée pour utiliser ces outils de manière responsable.</p>
+
+  <a href="index.html" class="back-link">← Retour à l'accueil</a>
+
+</body>
+</html>

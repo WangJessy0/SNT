@@ -1,0 +1,83 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* VARIABLES GLOBALES : couleurs pastel raffinées */
+:root {
+  --bg-color: #fef6fb;           /* rose très pâle */
+  --text-color: #2e2e2e;         /* gris doux */
+  --primary-color: #b8c0ff;      /* bleu lavande pastel */
+  --secondary-color: #ffb5e8;    /* rose bubblegum pastel */
+  --accent-color: #ffd1dc;       /* rose doux pêche */
+  --radius: 16px;
+}
+
+/* TYPOGRAPHIE MODERNE ET ÉLÉGANTE */
+body {
+  font-family: 'DM Serif Display', serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-size: 17px;
+  line-height: 1.75;
+  padding: 2rem;
+}
+
+/* TITRES */
+h1, h2, h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-weight: normal;
+  letter-spacing: 0.6px;
+}
+
+/* LIENS */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+a:hover {
+  color: var(--secondary-color);
+}
+
+/* BOUTONS */
+.button {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.8rem 1.6rem;
+  border: none;
+  border-radius: var(--radius);
+  font-weight: bold;
+  font-family: 'DM Serif Display', serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.button:hover {
+  background-color: var(--secondary-color);
+  transform: scale(1.05);
+}
+
+/* CONTAINERS */
+.container {
+  max-width: 800px;
+  margin: auto;
+  background-color: white;
+  padding: 2.5rem;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+/* ANIMATION APPARITION */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
